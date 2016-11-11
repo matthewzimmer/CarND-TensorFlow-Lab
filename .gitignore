@@ -91,3 +91,7 @@ ENV/
 # Data
 notMNIST.pickle
 *.zip
+
+# JetBrains IDE meta
+.idea
+*.iml
