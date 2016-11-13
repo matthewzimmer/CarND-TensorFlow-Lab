@@ -114,7 +114,13 @@ def normalize_greyscale(image_data):
     :return: Normalized image data
     """
     # ToDo: Implement Min-Max scaling for greyscale image data
-    return image_data
+    a = 0.1
+    b = 0.9
+    x_min = np.min(image_data)
+    x_max = np.max(image_data)
+    x_prime = [a + (((x-x_min)*(b-a))/(x_max-x_min)) for x in image_data]
+    print('X` min =', x_prime[0], 'X` max =', x_prime[-1])
+    return x_prime
 
 
 ### DON'T MODIFY ANYTHING BELOW ###
